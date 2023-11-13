@@ -16,7 +16,7 @@ RUN echo "Updating apt-get and installing dependencies..." && \
 ARG VROOM_RELEASE=v1.13.0
 
 RUN echo "Cloning and installing vroom release ${VROOM_RELEASE}..." && \
-    git clone --branch $VROOM_RELEASE --recurse-submodules https://github.com/VROOM-Project/vroom.git && \
+    git clone --branch $VROOM_RELEASE --recurse-submodules https://github.com/jbournonville/vroom.git && \
     cd vroom && \
     make -C /vroom/src -j$(nproc) && \
     cd /
